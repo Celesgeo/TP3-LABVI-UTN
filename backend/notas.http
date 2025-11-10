@@ -1,0 +1,36 @@
+### CREAR NOTA PARA EL ALUMNO DEL USUARIO LOGUEADO
+POST http://localhost:3000/notas
+Authorization: Bearer TU_TOKEN
+Content-Type: application/json
+
+{
+  "materia_id": 1,
+  "nota1": 7,
+  "nota2": 8,
+  "nota3": 9
+}
+
+###
+
+### LISTAR NOTAS DEL ALUMNO DEL USUARIO LOGUEADO
+GET http://localhost:3000/notas
+Authorization: Bearer TU_TOKEN
+
+###
+
+### EDITAR NOTA
+PUT http://localhost:3000/notas/1
+Authorization: Bearer TU_TOKEN
+Content-Type: application/json
+
+{
+  "nota1": 9,
+  "nota2": 10,
+  "nota3": 8
+}
+
+###
+
+### ELIMINAR NOTA
+DELETE http://localhost:3000/notas/1
+Authorization: Bearer TU_TOKEN

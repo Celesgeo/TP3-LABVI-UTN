@@ -1,0 +1,14 @@
+### CREAR MATERIA
+POST http://localhost:3000/materias
+Authorization: Bearer TU_TOKEN_AQUI
+Content-Type: application/json
+
+{
+"nombre": "Programación III",
+"codigo": "PROG3",
+"año": 3
+}
+
+### LISTAR MATERIAS
+GET http://localhost:3000/materias
+Authorization: Bearer TU_TOKEN_AQUI
