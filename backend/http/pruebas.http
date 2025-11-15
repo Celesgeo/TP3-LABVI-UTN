@@ -1,0 +1,84 @@
+### LOGIN (obtener token)
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "celeste@utn.com",
+  "password": "Celeste123!"
+}
+
+###
+###
+
+### CREAR ALUMNO
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "dni": "12345678",
+  "email": "juan.perez@utn.com"
+}
+
+###
+
+### LISTAR ALUMNOS
+GET http://localhost:3000/alumnos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+###
+
+### CREAR MATERIA
+POST http://localhost:3000/materias
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+{
+  "nombre": "Matemática",
+  "codigo": "MAT101",
+  "año": 1
+}
+
+###
+
+### LISTAR MATERIAS
+GET http://localhost:3000/materias
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+###
+
+### ASIGNAR NOTA A ALUMNO
+POST http://localhost:3000/notas
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+{
+  "alumno_id": 1,
+  "materia_id": 1,
+  "nota": 8.5
+}
+
+
+###
+
+### LISTAR NOTAS POR ALUMNO
+GET http://localhost:3000/notas/alumno/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+###
+
+### LISTAR PROMEDIO POR ALUMNO
+GET http://localhost:3000/notas/alumno/1/promedio
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+### LISTAR NOTAS POR ALUMNO
+GET http://localhost:3000/notas/alumno/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
+
+###
+
+### LISTAR PROMEDIO POR ALUMNO
+GET http://localhost:3000/notas/alumno/1/promedio
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjZWxlc3RlQHV0bi5jb20iLCJpYXQiOjE3NjMxOTc1NzksImV4cCI6MTc2MzIxMTk3OX0.a4IiSYoSqItf58S8S07rQdPhf04etIEUWBoL1DHOmYo
